@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block title %}My Page{% endblock %} {% block head %} {% parent %} {% endblock %} {% block
+content %}
+<h1>git分支管理</h1>
+<div class="new-branch">
+    <label for="">请输入新建分支名字：
+        <input type="text" name="" id="newname">
+        </label>
+    <button type="sumbit" id="submit">提交</button>
+</div>
+<ul>
+    <li></li>
+</ul>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $('#submit').on('click', function () {
+        $.ajax({
+            type: "get",
+            url: "/controller/createbranch",
+            data: {
+                id: $('#newname').val()
+            },
+            dataType: "json",
+            success: function (data) {
+                alert(data)
+            }
+        });
+    })
+</script>
+{% endblock %}

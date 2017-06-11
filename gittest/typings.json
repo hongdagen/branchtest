@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "registry:dt/express#4.0.0+20170118060322",
+    "shelljs": "registry:dt/shelljs#0.7.6+20170215090504"
+  }
+}
